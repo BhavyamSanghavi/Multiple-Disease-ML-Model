@@ -7,7 +7,12 @@ import pickle
 import streamlit as st
 from streamlit_option_menu import option_menu
 
-
+st.set_page_config(
+    page_title="Multiple Disease Prediction System",
+    page_icon="🩺",  # You can use a different emoji or path to an icon file
+    layout="centered",  # Optional: 'centered' or 'wide'
+    initial_sidebar_state="expanded"  # Optional: 'expanded' or 'collapsed'
+)
 # loading the saved models
 
 diabetes_model = pickle.load(open('diabetes_model.sav', 'rb'))
